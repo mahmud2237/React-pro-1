@@ -1,33 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const todoTitle = 'My Todo List';
+  const date = new Date();
+  const dateName = date.getDate();
+  const monthName = date.getMonth();
+  const currentYear = date.getFullYear();
+
+  const headingStyle ={
+    backgroundColor: 'purple',
+    color: 'white',
+    fontSize: '4rem',
+    textAlign: 'center',
+    padding: '15px'
+  }
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+  
+      <h1 style={headingStyle}>Todo App</h1>
+      <h2 style={{ color:'red', fontSize:'3rem' }}>{todoTitle}</h2>
+      <p className='app'>Date: {dateName}/{monthName}/{currentYear}</p>
+      <ul>
+        <li>Learn React</li>
+        <li>Learn Node</li>
+        <li>Learn Express</li>
+        <li>Learn MongoDB</li>
+      </ul>
+      
     </>
   )
 }
