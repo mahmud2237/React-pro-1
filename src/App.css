@@ -1,3 +1,8 @@
+/* *{
+  margin: 0;
+  padding: 0;
+} */
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -5,14 +10,23 @@
   text-align: center;
 }
 
-.app{
+.card {
+  background-color: #f4f4f4;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 2px 4px 4px gray;
+}
+
+.app {
   color: purple;
   background-color: aliceblue;
 }
 
-ul li{
+ul li {
   list-style-type: number;
   margin: 1rem;
+  color: blue;
 }
 
 
